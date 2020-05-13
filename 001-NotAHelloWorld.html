@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Not a "Hello World"</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Alexoah YT">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+
+	<!-- BEGIN: needed to insert this block so the X3DOM will work -->
+	<script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css">
+	<!-- END: needed to insert this block so the X3DOM will work -->
+	
+	<link rel="stylesheet" type="text/css" href="./style/mainstyle.css">
+</head>
+<body>
+<h1>"Hello World"?</h1>
+<p>No, unfortunately this is not a "Hello World".<br/>
+I've just started learning X3DOM, and I can't even create something that looks like "Hello World" yet.<br/><br/>
+Meanwhile, try to have fun and inspect these objects with your mouse. You can do anything, from pressing and holding your mouse (left or right button) and moving your mouse around to see what will happen to these objects. Or you can try scrolling your mouse wheel on the objects too.
+</p>
+
+<x3d width="100%" height="400px">
+	<scene>
+		<transform translation='0 0 0'>
+			<shape>
+				<appearance>
+					<material diffuseColor='1 0 1'></material>
+				</appearance>
+				<box></box>
+			</shape>
+		</transform>
+		<transform translation='2.5 0 0'>
+			<shape>
+				<appearance>
+					<material diffuseColor='0 1 1'></material>
+				</appearance>
+				<cone></cone>
+			</shape>
+		</transform>
+		<transform translation='-2.5 0 0'>
+			<shape>
+				<appearance>
+					<material diffuseColor='1 1 0'></material>
+				</appearance>
+				<sphere></sphere>
+			</shape>
+		</transform>
+	</scene>
+</x3d>
+<hr noshade>
+<p id="footer_github"><sup><img class="emoji" title=":octocat:" alt=":octocat:" src="https://github.githubassets.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"> Created by <a href="http://github.com/alexoah">@alexoah</a> at GitHub.</sup></p>
+</body>
+</html>
