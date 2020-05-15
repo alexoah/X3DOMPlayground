@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title>Overriding CSS and Adding Function</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Alexoah YT">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+
+	<!-------------------------------------------------------
+		BEGIN: needed to insert this block so the X3DOM will work.
+	-->
+	<script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css">
+	<!-- 
+		END: needed to insert this block so the X3DOM will work.
+	--------------------------------------------------------->
+
+	<!-------------------------------------------------------
+		BEGIN: function.
+	-->
+	<script>
+		// change the shape color.
+		function changeColor(currentCaller) {
+			var curColor = document.getElementById(currentCaller).getAttribute('diffuseColor');
+
+			switch(curColor) {
+				case '1 0 1':
+					curColor = '0 1 1';
+					break;
+				case '0 1 1':
+					curColor = '1 1 0';
+					break;
+				case '1 1 0':
+					curColor = '1 0 1';
+					break;
+				default:
+					curColor = '1 0 0';
+			}
+			document.getElementById(currentCaller).setAttribute('diffuseColor', curColor);
+		}
+	</script>
+	<!-- 
+		END: function.
+	--------------------------------------------------------->
+	
+	<!-------------------------------------------------------
+		BEGIN: override some CSS.
+	-->
+	<link rel="stylesheet" type="text/css" href="./style/mainstyle.css">
+	
+	<!-- BEGIN: this style will apply only in current file -->
+	<style>
+		body {
+			background-color: #EEEFDE;
+		}
+		.takenotice {
+			color: #FF0000;
+		}
+		x3d	{
+			border: 2px solid darkblue;
+			background: rgba(128, 128, 128, 0.4);
+		}
+	</style>	
+	<!-- END: this style will apply only in current file -->
+	<!-- 
+		END: override some CSS.
+	--------------------------------------------------------->
+
+</head>
+<body>
+<h1>Overriding CSS and Adding Function</h1>
+<p>The previous page <a class="takenotice" href="001-NotAHelloWorld.html">NotAHelloWorld.html</a> is only a plain white area. And now, current page is the result of overriding some parts of the CSS.<br/><br/>
+Additional script has also been added for experiments on function. Just try clicking on each shape to change their colors.</p>
+
+<!-- using percent for width, just in case the browser needs to be resized -->
+<x3d width="100%" height="400px">
+	<scene>
+		<!-- the order for translation is 'x y z' -->
+		<transform translation='0 0 0'>
+			<shape onclick="changeColor('box');">
+				<appearance>
+					<material id="box" diffuseColor='1 0 1'></material>
+				</appearance>
+				<box></box>
+			</shape>
+		</transform>
+		<transform translation='2.5 0 0'>
+			<shape onclick="changeColor('cone');">
+				<appearance>
+					<material id="cone" diffuseColor='0 1 1'></material>
+				</appearance>
+				<cone></cone>
+			</shape>
+		</transform>
+		<transform translation='-2.5 0 0'>
+			<shape onclick="changeColor('sphere');">
+				<appearance>
+					<material id="sphere" diffuseColor='1 1 0'></material>
+				</appearance>
+				<sphere></sphere>
+			</shape>
+		</transform>
+	</scene>
+</x3d>
+<hr noshade>
+<p id="footer_github"><sup><img class="emoji" title=":octocat:" alt=":octocat:" src="https://github.githubassets.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"> Created by <a href="http://github.com/alexoah">@alexoah</a> at GitHub.</sup></p>
+</body>
+</html>
