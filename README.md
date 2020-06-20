@@ -4,7 +4,11 @@ A playground for X3DOM, the integration model which puts the declarative X3D sce
 I've just started learning this one, so what I'll upload here are my personal exercises on X3DOM.  
 Thank you for your visit!
 
-***list will be added later***
+* [001 - Not a "Hello World"](./001-NotAHelloWorld.html)
+* [002 - Overriding CSS and Adding Function](./002-OverrideCSSFunction.html)
+* [003 - Runtime Configuration](./003-RuntimeConfiguration.html)
+
+***more will be added later***
 
 ## The "Perhaps Related" Playgrounds
 * [ [HTML Playground](https://github.com/alexoah/HTMLPlayground) ] - [ [CSS Playground](https://github.com/alexoah/CSSPlayground) ] 

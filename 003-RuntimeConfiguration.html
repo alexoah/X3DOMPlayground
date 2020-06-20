@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Overriding CSS and Adding Function</title>
+	<title>Runtime Configuration</title>
 	<meta charset="UTF-8">
 	<meta name="author" content="Alexoah YT">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
@@ -50,7 +50,7 @@
 	<!-- BEGIN: this style will apply only in current file -->
 	<style>
 		body {
-			background-color: #EEEFDE;
+			background-color: #EEEEEE;
 		}
 		.takenotice {
 			color: #FF0000;
@@ -67,12 +67,20 @@
 
 </head>
 <body>
-<h1>Overriding CSS and Adding Function</h1>
-<p>The previous page <a class="takenotice" href="001-NotAHelloWorld.html">001-NotAHelloWorld.html</a> is only a plain white area. And now, current page is the result of overriding some parts of the CSS.<br/><br/>
-Additional script has also been added for experiments on function. Just try clicking on each shape to change their colors.</p>
+<h1>Runtime Configuration</h1>
+<p>Now, some experiment with runtime default behavior ... by setting params.
+<ul>
+	<li><em>The stat is activated.</em><br/>
+	Have you seen an additional box with some stats over there?</li><br/>
+	<li><em>The primitives are rendered in low quality.</em><br/>
+	When you try to zoom in / out the objects, you'll notice the quality difference if you compare them with the objects from previous page <a class="takenotice" href="002-OverrideCSSFunction.html">002-OverrideCSSFunction</a>.</li>
+</ul><p/>
+
+<p>Stat window is no longer needed? The stat window has somehow disappeared and you want to display it again? Or are you not even sure which one the stat window is?<br/>
+Try clicking the object area first, then press the space bar to toggle the visibility of the stat window.<br/><br/>
 
 <!-- using percent for width, just in case the browser needs to be resized -->
-<x3d width="100%" height="400px">
+<x3d width="100%" height="400px" showStat="true" showLog="false" primitiveQuality="low" showProgress="false">
 	<scene>
 		<!-- the order for translation is 'x y z' -->
 		<transform translation='0 0 0'>
