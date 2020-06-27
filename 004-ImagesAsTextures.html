@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>Images as Textures</title>
+	<meta charset="UTF-8">
+	<meta name="author" content="Alexoah YT">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+
+	<!-------------------------------------------------------
+		BEGIN: needed to insert this block so the X3DOM will work.
+	-->
+	<script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css">
+	<!-- 
+		END: needed to insert this block so the X3DOM will work.
+	--------------------------------------------------------->
+	
+	<!-------------------------------------------------------
+		BEGIN: override some CSS.
+	-->
+	<link rel="stylesheet" type="text/css" href="./style/mainstyle.css">
+
+	<!-- BEGIN: this style will apply only in current file -->
+	<style>
+		.takenotice {
+			color: #FF0000;
+		}
+	</style>	
+	<!-- END: this style will apply only in current file -->
+	<!-- 
+		END: override some CSS.
+	--------------------------------------------------------->
+</head>
+<body>
+<h1>Images as Textures</h1>
+<p>The objects from previous pages used plain colors.<br/>
+We are using images as their textures below.</p>
+
+<!-- using percent for width, just in case the browser needs to be resized -->
+<x3d width="100%" height="400px">
+	<scene>
+		<transform translation='0 0 0'>
+			<shape>
+				<appearance>
+					<ImageTexture url="https://raw.githubusercontent.com/alexoah/labGithub-Tetris/master/texture.jpg"></ImageTexture>
+				</appearance>
+				<box></box>
+			</shape>
+		</transform>
+		<transform translation='2.5 0 0'>
+			<shape>
+				<appearance>
+					<ImageTexture url="https://raw.githubusercontent.com/alexoah/labGithub-Tetris/master/texture.jpg"></ImageTexture>
+				</appearance>
+				<cone></cone>
+			</shape>
+		</transform>
+		<transform translation='-2.5 0 0'>
+			<shape>
+				<appearance>
+					<ImageTexture url="https://raw.githubusercontent.com/alexoah/labGithub-Tetris/master/texture.jpg"></ImageTexture>
+				</appearance>
+				<sphere></sphere>
+			</shape>
+		</transform>
+	</scene>
+</x3d>
+<hr noshade>
+<p id="footer_github"><sup><img class="emoji" title=":octocat:" alt=":octocat:" src="https://github.githubassets.com/images/icons/emoji/octocat.png" height="20" width="20" align="absmiddle"> Created by <a href="http://github.com/alexoah">@alexoah</a> at GitHub.</sup></p>
+</body>
+</html>
