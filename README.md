@@ -7,6 +7,7 @@ Thank you for your visit!
 * [001 - Not a "Hello World"](./001-NotAHelloWorld.html)
 * [002 - Overriding CSS and Adding Function](./002-OverrideCSSFunction.html)
 * [003 - Runtime Configuration](./003-RuntimeConfiguration.html)
+* [004 - Images as Textures](./004-ImagesAsTextures)
 
 ***more will be added later***
 
